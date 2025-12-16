@@ -16,7 +16,7 @@ return new class extends Migration
             $table->foreignId('license_id')->constrained()->onDelete('cascade');
             $table->string('email');
             $table->integer('reminder_day');
-            $table->timestamps('sent_at');
+            $table->timestamp('sent_at');
 
             $table->unique(['license_id', 'reminder_day', 'sent_at']);
             $table->index(['license_id', 'reminder_day']);
